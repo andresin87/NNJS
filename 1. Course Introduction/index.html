@@ -1,8 +1,17 @@
 <html>
     <head><link rel="stylesheet" href="normalize.css">
+        <script type="application/javascript" src="//cdn.rawgit.com/Alorel/console-log-html/master/console-log-html.min.js"></script>
         <script src="https://cdn.rawgit.com/BrainJS/brain.js/45ce6ffc/browser.js"></script>
         <script src="index.pack.js"></script>
     </head>
     <body>
+    <ul id="myULContainer"></ul>
+        <script type="application/javascript">
+          window.addEventListener('load', function () {
+              ConsoleLogHTML.connect(document.getElementById("myULContainer")); // Redirect log messages
+              Code();
+              ConsoleLogHTML.disconnect(); // Stop redirecting
+          }, false);
+        </script>
     </body>
 </html>
